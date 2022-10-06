@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Experience on Will Arnold</title>
+    <link>https://wla0002.github.io/experience/</link>
+    <description>Recent content in Experience on Will Arnold</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 02 Mar 2017 12:00:00 -0500</lastBuildDate><atom:link href="https://wla0002.github.io/experience/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Westinghouse</title>
+      <link>https://wla0002.github.io/experience/westinghouse/</link>
+      <pubDate>Sat, 01 May 2021 12:00:00 +0000</pubDate>
+      
+      <guid>https://wla0002.github.io/experience/westinghouse/</guid>
+      <description>Description Conceptualized and Fabricated a Dashboard that streamlined collaboration between various departments. Inclusion of different statistical methods and visualizations that accelerated decision making and communication. In order to reduce machine down time in a manufacturing process. Adapted to independent work environment with minimal interaction with other software engineers during programming. SQL Querying data and imbedding logic to display active statistics that updated every 5 minutes from an oracle database. Python code that was responsible for managing the SQL query.</description>
+    </item>
+    
+    <item>
+      <title>NASA Space Grant</title>
+      <link>https://wla0002.github.io/experience/nasa_space_grant/</link>
+      <pubDate>Mon, 01 Oct 2018 11:00:59 -0400</pubDate>
+      
+      <guid>https://wla0002.github.io/experience/nasa_space_grant/</guid>
+      <description>Description Analyzed use of Epilog Lasers Zing 16 laser engraver and fabricated a tool that supported a more effective use of the machine. Assisting in improved quality of experience and decrease of test materials.
+Skills acquired and main takeaways Tool conceptualization Independent Project Orchestration Self Reliance </description>
+    </item>
+    
+    <item>
+      <title>Skills</title>
+      <link>https://wla0002.github.io/experience/skills/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://wla0002.github.io/experience/skills/</guid>
+      <description> Current Skills Create Programs with Python 3 SQL oracle postgreSQL SQLite Summarize and analyze data sets Conduct Hypothesis Testing One Sample T-Test Binomial Linear Regression T-Test F-Test Data Manipulation w/ Pandas Statistics Web Scraping with Beautiful Soup Exploratory Data analysis Clean and Tidy Datasets w/ Pandas Visualization with seaborn, matplotlib Communicate Data Science Findings Future Skills Supervised ML Models Linear regression Logistic regression K nearest Neighbors Decision Trees Naive Bayes Classifiers Support Vector Machines Random Forests Unsupervised ML Models K-means Clustering Principle Compound analysis Deep Learning with Tensor Flow Regression Classification Feature engineering Data Transformation Feature Selection Evaluation Metrics Normalization Training, Validation, and Test Data sets Accuracy, Recall, Precision, F1 AUC, ROC Handling Big Data with PySpark </description>
+    </item>
+    
+  </channel>
+</rss>
