@@ -9,11 +9,12 @@
     <lastBuildDate>Thu, 02 Mar 2017 12:00:00 -0500</lastBuildDate><atom:link href="https://wla0002.github.io/projects/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Biodiversity in National Parks</title>
-      <link>https://wla0002.github.io/projects/biodiversity/</link>
+      <link>https://wla0002.github.io/projects/biodiversity/biodiversity/</link>
       <pubDate>Mon, 19 Sep 2022 11:00:59 -0400</pubDate>
       
-      <guid>https://wla0002.github.io/projects/biodiversity/</guid>
-      <description>Biodiversity Repository GitHub</description>
+      <guid>https://wla0002.github.io/projects/biodiversity/biodiversity/</guid>
+      <description>Biodiversity Repository GitHub
+Intro Animal Data from the national parks was analyzed to find out more about what animals are endangered, where they are located and other variables that were correlative with the unfortunate status. Mammals and birds were most likely to need intervention. Birds and Myotis/Bats were not statistically significantly related together but they were also not statistically significantly related to other categories like reptiles and fish. Myotis and bats were overwhelmingly the most likely to need intervention of all of the other species.</description>
     </item>
     
     <item>
@@ -27,11 +28,12 @@
     
     <item>
       <title>Airline Analysis</title>
-      <link>https://wla0002.github.io/projects/airline/</link>
+      <link>https://wla0002.github.io/projects/airline/airline/</link>
       <pubDate>Mon, 25 Jul 2022 11:13:32 -0400</pubDate>
       
-      <guid>https://wla0002.github.io/projects/airline/</guid>
-      <description>Airline Repository GitHub</description>
+      <guid>https://wla0002.github.io/projects/airline/airline/</guid>
+      <description>Airline Repository GitHub
+1. Intro This project is an analysis of flight data. There were 129,780 observations in this dataset. Variables in this data that were analyzed include coach price, length of flight, number of passengers, miles of flight, flight delay, as well as various different features of the flights and their relationship to price. It was desired to understand if $500 for a flight ticket would be unreasonable for an 8-hour flight.</description>
     </item>
     
     <item>

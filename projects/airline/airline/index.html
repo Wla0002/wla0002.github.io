@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
-    <title>Sigmabrew | Will Arnold</title>
+    <title>Airline Analysis | Will Arnold</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="description" content="Analysis and DMAIC process with hypothsis testing of a fictional coffee shop">
+    <meta name="description" content="Analysis of various variables relating to airlines">
     <meta name="generator" content="Hugo 0.104.1" />
     
     
@@ -27,13 +27,13 @@
 
     
 
-    <meta itemprop="name" content="Sigmabrew">
-<meta itemprop="description" content="Analysis and DMAIC process with hypothsis testing of a fictional coffee shop"><meta itemprop="datePublished" content="2017-04-13T11:15:58-04:00" />
-<meta itemprop="dateModified" content="2017-04-13T11:15:58-04:00" />
-<meta itemprop="wordCount" content="10">
+    <meta itemprop="name" content="Airline Analysis">
+<meta itemprop="description" content="Analysis of various variables relating to airlines"><meta itemprop="datePublished" content="2022-07-25T11:13:32-04:00" />
+<meta itemprop="dateModified" content="2022-07-25T11:13:32-04:00" />
+<meta itemprop="wordCount" content="1627">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Sigmabrew"/>
-<meta name="twitter:description" content="Analysis and DMAIC process with hypothsis testing of a fictional coffee shop"/>
+<meta name="twitter:title" content="Airline Analysis"/>
+<meta name="twitter:description" content="Analysis of various variables relating to airlines"/>
 
 	
   </head>
@@ -169,17 +169,80 @@
           
         PROJECTS
       </aside>
-      <h1 class="f1 athelas mt3 mb1">Sigmabrew</h1>
+      <h1 class="f1 athelas mt3 mb1">Airline Analysis</h1>
       
       
       
-      <time class="f6 mv4 dib tracked" datetime="2017-04-13T11:15:58-04:00">April 13, 2017</time>
+      <time class="f6 mv4 dib tracked" datetime="2022-07-25T11:13:32-04:00">July 25, 2022</time>
       
 
       
       
     </header>
-    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>still tryna figure out how to display this one tbh</p>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p><a href="https://github.com/Wla0002/airline_analysis">Airline Repository GitHub</a></p>
+<h3 id="1-intro">1. Intro</h3>
+<p>This project is an analysis of flight data. There were 129,780 observations in this dataset. Variables in this data that were analyzed include coach price, length of flight, number of passengers, miles of flight, flight delay, as well as various different features of the flights and their relationship to price. It was desired to understand if $500 for a flight ticket would be unreasonable for an 8-hour flight. It was found that for an 8-hour flight, the average price is 431 dollars. It was found that coach price, and first-class price has a positive linear relationship. Comparing the same two variables as before but separating by the flight occurring on a weekend or not. It was found that weekend flight prices are generally more expensive. Linear regression comparing coach price and number of passengers shows no linear relationship.
+The remainder of the paper will have a question-oriented structure that will show in more detail each question that was formulated and how they were addressed with a methods, analysis, and conclusion section.</p>
+<h3 id="2-analysis">2. Analysis</h3>
+<h5 id="21-normality">2.1 Normality</h5>
+<p>Testing normality with a histogram of the 129,780 observed coach prices vs the count of occurrences. (Appendix Figure 1) For this vast number of observations, it can be assumed with high confidence that the data is normal. It was assumed based on the histogram of the coach price variable that the data appears to be normal.</p>
+<h5 id="22-average-coach-price-flight">2.2 Average Coach Price Flight</h5>
+<p>Taking the average of the total population before accounting for a common flight time vs the average of only flights that are 8 hours long, the prices were also normally distributed when plotted on a histogram. (Appendix Figure 2) The population mean of the non-queried dataset was $376.59, which in a holistic perspective makes a $500 ticket seem unreasonable. However, when compared to flights that are 8 hours long, the mean turns out to be $431 USD, which is more reasonable in terms of a $500 ticket. For a flight of 8 hours a $500 ticket is not unreasonable based on a holistic perspective.</p>
+<h5 id="23-anova-8-hour-flights-mean-vs-population-mean">2.3 ANOVA 8-hour flights Mean vs Population Mean</h5>
+<p>Testing the population mean vs the sample mean with a flight of 8 hours in length. A one-way ANOVA test was completed in this case in order to test statistically significant relationship between the two samples. (Appendix Figure 3) The F-Stat of the ANOVA result was 1720.69, which indicates that there is significant variation between the sample and population. A p value of less than .05 indicates that the rejection of the null hypothesis is warranted, leading to strong evidence of a difference between the population mean and the sample mean. This indicates there is statistical evidence that the mean of $431 is different than $376.59.</p>
+<h5 id="24-flight-delay-distribution">2.4 Flight Delay Distribution</h5>
+<p>Analyzing the distribution of the flight delays to see how often a flight delay would be putting the client at risk of missing their connecting flight. (Appendix Figure 4) Plotting the count of various timed delays on a histogram show that the vast majority of delays exist between the 9- and 13-minute range. That is if there is any delay at all, there is a significant number of 0-minute-long delays that cannot be omitted from context. In fact, 7% of all flights in the cleaned data have no delay. The mean number of minutes in a delay is around 12. Flights begin boarding 30-60 minutes before the flight departure time, so querying the data shows us that 4.6% of flights are delayed into the minimum boarding time of the flight. In other words, 4.6% of flights are at risk of missing their connecting flight due to delay.</p>
+<h5 id="25-coach-price-vs-first-class-relationship">2.5 Coach Price vs First Class Relationship</h5>
+<p>A line plot that shows coach price vs first class price with a trend line in the middle shows that as price of coach tickets increase, first class tickets also increase. (Appendix Figure 5) the first-class prices are higher than the coach obviously, but the trend line is still positive. Testing for covariance and correlation show strong positive dependence with a covariance of 8357.37, and a correlation of .75 which also implies a strong relationship between the two variables. First class and coach price are strongly related to each other. Further tests such as regression could be done to analyze this question further.</p>
+<h5 id="26-coach-price-with-meal-entertainment-wi-fi-vs-without">2.6 Coach Price with Meal, Entertainment, Wi-Fi vs Without.</h5>
+<p>One visualization done for each coach price count with a separation in presence of meal, entertainment, and Wi-Fi during a flight (Appendix Figure 6, 7, 8). Each were plotted in a histogram and overlaid on each other. Also, a one-way ANOVA was done between these samples as well in order to test statistical significance between the status of meal, entertainment, and WI-FI (FEW). There were significantly more flights in general without FEW than flights with FEW. Inflight meals were different than the other two due to the fact that there were more flights without a meal than flights with a meal. There was also a negligible p value, and a f stat of 2254 meaning there was significant variation between the sample of with inflight meal and without. We reject the null hypothesis and assume strong significant difference between the samples. For the other two (Entertainment, and WI-FI) they both had more flights with it than without. Each was similar to where it is recommended to accept the alternative hypothesis of statistically significant difference between the sample means. Flights are priced differently based on presence of Meal, Entertainment, and WI-FI.</p>
+<h5 id="27-number-of-passengers-in-increasing-flight-time-categories">2.7 Number of Passengers in Increasing Flight Time Categories</h5>
+<p>A line plot that shows the density of flights with increasing number of passengers was plotted in 8 different flight time categories, increasing from 1 hour to 8 hours (Appendix Figure 9). In each of the categories the great significance of passengers exists in the 200 – 220 range. There is also a collection of flights with passengers in the 150 – 170 range in each of the categories. The most flights existed in the 3–4-hour range. There is no relationship between hours of flight and passengers. Each category follows the same general trend but only differs with the volume of flights that fall into the categories. However further tests could be done to analyze this deeper.</p>
+<h5 id="28-first-class-vs-coach-prices-on-weekends-vs-weekdays">2.8 First Class vs Coach Prices on Weekends vs Weekdays</h5>
+<p>The same line plot from 2.5 was created but a hue around the weekend variable was added to show differentiation between first class, and coach price on weekend vs weekday (Appendix Figure 10). It shows that weekend flights were more expensive, in both coach and first class. It is best to fly on weekdays if the goal is to save money.</p>
+<h5 id="29-coach-prices-vs-redeye-status-on-each-day-of-the-week">2.9 Coach Prices vs Redeye Status on Each Day of The Week.</h5>
+<p>A box plot with built in error was created along with a weekday category on the x axis. This was done to show the difference between redeye coach price and non-redeye coach price on each day of the week. The chart shows that non redeye on every day of the week is more expensive generally. But on Sunday, Friday, and Saturday, they are more expensive than the other 4 days of the week, also confirming what was established in the previous question. Monday has the lowest price in terms of the error indicator that extends lower than all other days. Monday, Tuesday, Wednesday, Thursday are the cheapest days to fly.</p>
+<h5 id="210-passenger-number-and-coach-price-relationship">2.10 Passenger Number and Coach Price relationship</h5>
+<p>Linear regression comparing the coach price as an output and number of passengers as the input. The initial hypothesis was that the lower the passengers the lower the coach price was due to the fact that the airline needed to fill the flight. The correlation showed weak correlation, and the data failed to fit the linear regression model. There was weak covariance as well which tells us that these variables are dependent on each other, but not nearly as much as we had seen in other tests.</p>
+<h3 id="conclusiondiscussion">Conclusion/Discussion</h3>
+<p>This analysis has shown that a $500 dollar flight seems unreasonable in terms of the total population of flights, but not on an 8-hour flight. There is a strong statistically significant difference in the population mean and the sample mean of 8-hour flights. There is a %95.4 chance that the flight delay will not extend into boarding time of a connecting flight. In fact, there is a 7% chance that there will be no delay at all. There is a %4.6 chance that the delay will extend into the boarding of a next flight which occurs 30-60 minutes prior to departure. It was found that there is a strong positive correlation between first class price and coach price. There are more flights without meals included, but the flights that include them are generally more expensive slightly. However statistically, there is a significant difference between the two samples of flights with meals and without meals. There are more flights within flight entertainment and WI-FI than not. Which is different than the flights with meals. However, they are the same in the sense that there is strong statistical difference between the two samples. Containing inflight entertainment and not and containing inflight WI-FI and not. It was found that flights are more expensive on the weekends, it was also shown that redeye flights are less expensive, so the cheapest flights would be redeye flights on Monday Tuesday Wednesday and Thursday. There was a hypothesis that number of passengers affected the coach price, this was found to have a dependence and relationship, but it wasn’t strong since the data didn’t fit with the regression model. Going forward there could be more analysis done on coach price vs first class price, perhaps a regression model could be utilized.</p>
+<h3 id="appendix">Appendix</h3>
+<p><figure><img src="https://wla0002.github.io/images/1_price_vs_count.PNG"/>
+</figure>
+
+<figure><img src="https://wla0002.github.io/images/2_price_vs_count_8hrs.PNG"/>
+</figure>
+
+<figure><img src="https://wla0002.github.io/images/aa_figure_3.jpg"/>
+</figure>
+
+<figure><img src="https://wla0002.github.io/images/3_delay_vs_count.PNG"/>
+</figure>
+
+<figure><img src="https://wla0002.github.io/images/4_coach_price_vs_first_class_price.PNG"/>
+</figure>
+
+<figure><img src="https://wla0002.github.io/images/5_meal_price.PNG"/>
+</figure>
+
+<figure><img src="https://wla0002.github.io/images/6_ent_price.PNG"/>
+</figure>
+
+<figure><img src="https://wla0002.github.io/images/7_wifi_price.PNG"/>
+</figure>
+
+<figure><img src="https://wla0002.github.io/images/8_no_passengers_time.PNG"/>
+</figure>
+
+<figure><img src="https://wla0002.github.io/images/9_weekend_coach_firstclass_price.PNG"/>
+</figure>
+
+<figure><img src="https://wla0002.github.io/images/10_redeye_price.PNG"/>
+</figure>
+</p>
+<p> </p>
+<p> 
+ </p>
 <ul class="pa0">
   
 </ul>

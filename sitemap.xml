@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://wla0002.github.io/projects/biodiversity/</loc>
+    <loc>https://wla0002.github.io/projects/biodiversity/biodiversity/</loc>
     <lastmod>2022-09-19T11:00:59-04:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -17,7 +17,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://wla0002.github.io/projects/airline/</loc>
+    <loc>https://wla0002.github.io/projects/airline/airline/</loc>
     <lastmod>2022-07-25T11:13:32-04:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>

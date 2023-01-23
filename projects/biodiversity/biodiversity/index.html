@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
-    <title>Sigmabrew | Will Arnold</title>
+    <title>Biodiversity in National Parks | Will Arnold</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="description" content="Analysis and DMAIC process with hypothsis testing of a fictional coffee shop">
+    <meta name="description" content="Biodiversity">
     <meta name="generator" content="Hugo 0.104.1" />
     
     
@@ -27,13 +27,13 @@
 
     
 
-    <meta itemprop="name" content="Sigmabrew">
-<meta itemprop="description" content="Analysis and DMAIC process with hypothsis testing of a fictional coffee shop"><meta itemprop="datePublished" content="2017-04-13T11:15:58-04:00" />
-<meta itemprop="dateModified" content="2017-04-13T11:15:58-04:00" />
-<meta itemprop="wordCount" content="10">
+    <meta itemprop="name" content="Biodiversity in National Parks">
+<meta itemprop="description" content="Biodiversity"><meta itemprop="datePublished" content="2022-09-19T11:00:59-04:00" />
+<meta itemprop="dateModified" content="2022-09-19T11:00:59-04:00" />
+<meta itemprop="wordCount" content="915">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Sigmabrew"/>
-<meta name="twitter:description" content="Analysis and DMAIC process with hypothsis testing of a fictional coffee shop"/>
+<meta name="twitter:title" content="Biodiversity in National Parks"/>
+<meta name="twitter:description" content="Biodiversity"/>
 
 	
   </head>
@@ -169,17 +169,70 @@
           
         PROJECTS
       </aside>
-      <h1 class="f1 athelas mt3 mb1">Sigmabrew</h1>
+      <h1 class="f1 athelas mt3 mb1">Biodiversity in National Parks</h1>
       
       
       
-      <time class="f6 mv4 dib tracked" datetime="2017-04-13T11:15:58-04:00">April 13, 2017</time>
+      <time class="f6 mv4 dib tracked" datetime="2022-09-19T11:00:59-04:00">September 19, 2022</time>
       
 
       
       
     </header>
-    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>still tryna figure out how to display this one tbh</p>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p><a href="https://github.com/Wla0002/biodiversity">Biodiversity Repository GitHub</a></p>
+<h3 id="intro">Intro</h3>
+<p>Animal Data from the national parks was analyzed to find out more about what animals are endangered, where they are located and other variables that were correlative with the unfortunate status. Mammals and birds were most likely to need intervention. Birds and Myotis/Bats were not statistically significantly related together but they were also not statistically significantly related to other categories like reptiles and fish. Myotis and bats were overwhelmingly the most likely to need intervention of all of the other species.</p>
+<p>The analysis structure will be question oriented with the first part of each division being methodology, then analysis, and finally conclusion. This cycle will repeat with each question.</p>
+<h3 id="analysis">Analysis</h3>
+<h5 id="21-data-structure">2.1 Data Structure</h5>
+<p>There were two datasets, “species_info.csv” and “Observations.csv” these were merged together by the common variable “scientific_name”. This was done to create one large dataset to work with.</p>
+<h5 id="22-eda">2.2 EDA</h5>
+<p>Viewing the data showed each column having 25,632 non null values, however conservation status, potentially the most important, only had 880 non null values, this means that 96.5% of all conservation status observations were null. There are 5541 different species in the dataset, and there are 4 different national parks. There are 7 different categories of animals including, 2 different types of plant, mammal, bird, reptile, amphibian, and fish. The data was then cleaned to only include the data that contained a non-null value in the conservation status column.</p>
+<h5 id="23-bar-plot-of-categories">2.3 Bar Plot of Categories</h5>
+<p>The bar plot shows the count of all the different categories of animal. This is a distribution of all of the data rather than the cleaned data (Appendix Figure 1). This shows an overwhelming majority of species observed existing in the Vascular Plant Category. This shows that the majority of data is not indicative of the specific data that we are interested in, this allows us to confidently clean the data and only use the data that is of concern.</p>
+<h5 id="24-distribution-of-conservation-status">2.4 Distribution of Conservation Status</h5>
+<p>This is a bar plot of the uncleaned data that shows the conservation status of the observations. This shows us that the vast majority of observations shows no intervention (Appendix Figure 2). In fact, 79% of all vascular plant observations required no intervention. It can be confidently estimated that the majority of observations were vascular plant observations, and the majority of them is not of concern with the scope of this analysis. Allowing there to be confidence in the omission of the data that has no conservation status.</p>
+<h5 id="25-national-parks-interest">2.5 National Parks Interest</h5>
+<p>A bar plot showing the count of observations of each national park. (Appendix Figure 3) Each national park has the same number of observations relinquishing any further insight into the location or region as a cause of concern for the species.</p>
+<h5 id="26-species-analysis-contingency-tables-and-chi2">2.6 Species Analysis: Contingency Tables and Chi2</h5>
+<p>Using chi squared and contingency tables, the strength of association between categorical could be tested (Appendix Figure 5). First up, comparing the association of category and conservation status. This showed a 3130 chi2 statistic, and a p-value &lt; .05. This implies strong association between category of animal, and conservation status. The next two categories compared was the national park and conservation status (Appendix Figure 6). This showed a 0.0 chi2 statistic, implying that there is no relationship between national park and conservation status, giving further confidence in the current questioning direction. Next the 7 categories of animal and their percent protected were put into its own data frame (Appendix Figure 7). This showed that mammals and birds were most likely to be protected due to their percent protected being 17.05% and 15.37% respectively. This shows that mammals and birds are more likely to be protected and deserve further investigation.</p>
+<h5 id="25-differences-in-species">2.5 Differences in Species</h5>
+<p>In order to further understand the relationship between categories of animals a chi2 test was done. The first test was comparing mammals and birds, showing a chi2 of .16 implying no statistical relationship (Appendix Figure 8). Comparing mammals to reptiles and birds showed a chi2 of 4.28 and 2.32 respectively (Appendix Figure 9). This implies that mammals stand alone in terms of protection status. This implies that further investigation should be done to identify the trends in the protected species.</p>
+<h5 id="26-analysis-of-mammals">2.6 Analysis of mammals</h5>
+<p>The data was further cleaned to include only the names of animals, each word was split and counted. It shows that the most common words were bat and myotis, leading to the assumption that bats and myotis were the most prevalent species that are in need of intervention.</p>
+<h3 id="conclusionsdiscussions">Conclusions/Discussions</h3>
+<p>The distribution of conservation shows that the vast majority of species were not part of the conservation. Mammals and birds had the highest percentage of protected species. Mammals and birds did not have significant relationship in conservation percentage, but mammals and reptiles showed significant statistical differences between conservation percentage. Bats occurred the greatest number of times and most likely were found in Yellowstone national park. All observations were from the past 7 days, which prohibits analysis of changes over time, in order to set up a system that tracks the change over time, more data must continue to be collected. Another piece that is missing is the Area of each park, it can be assumed that Yellowstone National Park might be much larger than the other parks which would mean that it would exhibit more observations and greater biodiversity. Lastly, if precise locations were recorded, the spatial distribution of the species could also be observed and test if these observations are spatially clustered.</p>
+<h3 id="appendix">Appendix</h3>
+<p><figure><img src="https://wla0002.github.io/images/bd_af1.PNG"/>
+</figure>
+
+<figure><img src="https://wla0002.github.io/images/bd_af2.PNG"/>
+</figure>
+
+<figure><img src="https://wla0002.github.io/images/bd_af3.PNG"/>
+</figure>
+
+<figure><img src="https://wla0002.github.io/images/bd_af4.PNG"/>
+</figure>
+
+<figure><img src="https://wla0002.github.io/images/bd_af5.jpg"/>
+</figure>
+
+<figure><img src="https://wla0002.github.io/images/bd_af6.PNG.jpg"/>
+</figure>
+
+<figure><img src="https://wla0002.github.io/images/bd_af7.PNG.jpg"/>
+</figure>
+
+<figure><img src="https://wla0002.github.io/images/bd_af8.jpg"/>
+</figure>
+
+<figure><img src="https://wla0002.github.io/images/bd_af9_1.jpg"/>
+</figure>
+
+<figure><img src="https://wla0002.github.io/images/bd_af9_2.jpg"/>
+</figure>
+</p>
 <ul class="pa0">
   
 </ul>
