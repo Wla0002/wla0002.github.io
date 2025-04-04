@@ -12,7 +12,7 @@ import remarkMath from "remark-math";
 // https://astro.build/config
 export default defineConfig({
   site: 'https://wla0002.github.io',
-  base: "/",
+  base: "/wla0002.github.io/",
   trailingSlash: "ignore",
   prefetch: {
     prefetchAll: true
